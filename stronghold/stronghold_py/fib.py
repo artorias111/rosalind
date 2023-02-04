@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import math
 
-#file=open('data/rosalind_fib.txt')
+#file=open('data/stronghold_data/rosalind_fib.txt'i,'r')
 #x=str(file.read())
 
-x='30 3'
+x='36 3'
 y=x.split()
 x=[]
 for i in y:
@@ -12,14 +12,14 @@ for i in y:
 
 n=x[0]
 k=x[1]
-i=4
-s=1+k
+print(n,k)
 
-while(i<=n):
-    if(i>4):
-        s=s+k+pow(k,i-3)
-    else:
-        s=s+k
-    i+=1
+def fib(n,k):
+	if n==1:
+		return 1
+	if n==2:
+		return 1
+	
+	return fib(n-1,k) + k*fib(n-2,k)	
 
-print(s)
+print(fib(n,k))
