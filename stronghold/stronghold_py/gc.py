@@ -1,30 +1,30 @@
 #!/usr/bin/python3
 
-f=open('../data/stronghold_data/rosalind_gc.txt','r')
+gc=0 #gc sum
+l=1 #total length 
+gcl=0
+curr=''#current highest fasta header
+m=0
 
-l,gc=0,0 #length, gc count and gc/l ratio
-m,m2=0,0 #max running gc content
-h='' #header with the highest gc content
-tmp=''
+#print the sequence with the highest gc/l (gcl)
 
-for i in f:
-	x=i.strip()
-	if x[0]==">":
-		m2=m
-		tmp=x
-		l,gc=0,0
-		continue
+#store the fasta file as a dictionary
 
-	for j in x:
-		if j=='G' or j=='C':
-			gc+=1
-		l+=1
+k,v=[],[]
 
-	gcl=gc/l	
-	if gcl > m :
-		m=gcl
-		h=tmp
-f.close()
+with open('/Users/shriram/code/rosalind/stronghold/data/stronghold_data/gc.txt') as f:
+	for x in f:
+		x=x.strip()
+		if x[0]=='>':
+			v.append(gc/l)
+			gc,l=0,0
+			k.append(x[1:])
+		else:
+			for i in x:
+				l+=1
+				if i=="G" or i=="C":
+					gc+=1
+v.append(gc/l)
+v.pop(0)
 
-print(h[1:])
-print(m2)
+print(k[v.index(max(v))],'\n',100*max(v))
