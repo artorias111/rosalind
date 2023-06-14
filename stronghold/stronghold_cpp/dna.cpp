@@ -1,4 +1,4 @@
-//!/usr/bin/g++
+// /usr/bin/g++ - you don't need a shebang line for cpp
 #include <iostream>
 #include <fstream> //file i/o
 using namespace std;
