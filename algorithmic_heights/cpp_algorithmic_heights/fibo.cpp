@@ -16,4 +16,5 @@ int main(){
 	int a;
 	a=fib(n);
 	cout<<a<<"\n";
+	return 0;
 }
