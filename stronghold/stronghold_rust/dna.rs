@@ -1,7 +1,0 @@
-//dna.rs
-
-let s=String::from("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC");
-
-for i in s {
-	println!("{}",s)
-}
