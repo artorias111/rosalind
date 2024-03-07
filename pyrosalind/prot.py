@@ -67,11 +67,11 @@ codons = {
 "GGG" : "G"
 }
 
-f=open('../data/stronghold_data/prot.txt','r')
+f=open('../data/prot.txt','r')
 
 for i in f:
 	x=i.strip()
 	for i in range(0,len(x)-2,3):
 		if codons[x[i:i+3]]=="Stop":
-			break	
+			break
 		print(codons[x[i:i+3]],end='')

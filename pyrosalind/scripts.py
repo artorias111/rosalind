@@ -21,4 +21,4 @@ if __name__ == "__main__" :
     print("this python script contains a few functions that used multiple times in rosalind projects")
 
     # Tests
-    print(read_fasta_file("../data/stronghold_data/grph.txt"))
+    print(read_fasta_file("../data/grph.txt"))

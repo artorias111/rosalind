@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-file=open('data/rosalind_revc.txt')
+file=open('../data/revc.txt')
 
 x=str(file.read())
 #x='AAAACCCGGT'
@@ -18,4 +18,3 @@ for i in x:
 
 x=y[::-1]
 print(x)
-
